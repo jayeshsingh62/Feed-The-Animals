@@ -21,5 +21,10 @@ public class PlayerController : MonoBehaviour
         // Move the player left-to-right
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
+        if (transform.position.x < -10)
+        {
+            transform.position = new Vector3(-10, transform.position.y, transform.position.z);
+        }
+
     }
 }
