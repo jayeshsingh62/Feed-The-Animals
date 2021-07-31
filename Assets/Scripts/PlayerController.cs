@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float horizontalInput;
+    private float verticalInput;
     private float speed = 10.0f;
     private float xRange = 10.0f;
     public GameObject projectilePrefab;
@@ -18,8 +19,9 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Get the horizontal input
+        // Get the horizontal and vertical input
         horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
 
         // Move the player left-to-right
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
