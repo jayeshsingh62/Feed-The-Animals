@@ -26,6 +26,9 @@ public class PlayerController : MonoBehaviour
         // Move the player left-to-right
         transform.Translate(Vector3.right * Time.deltaTime * speed * horizontalInput);
 
+        // Move the player up-to-down
+        transform.Translate(Vector3.forward * Time.deltaTime * speed * verticalInput);
+
         // Keep the player in bounds
         if (transform.position.x < -xRange)
         {
