@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(projectilePrefab, projectileSpawnPoint.position, projectilePrefab.transform.rotation); // Launch the projectile from the player
+            Instantiate(projectilePrefab, transform.position+projectileSpawnPoint.position, projectilePrefab.transform.rotation); // Launch the projectile from the player
         }
     }
 }
