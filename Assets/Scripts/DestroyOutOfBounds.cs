@@ -30,10 +30,12 @@ public class DestroyOutOfBounds : MonoBehaviour
 
         if (transform.position.x > horizontalBound)
         {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
         else if (transform.position.x < -horizontalBound)
         {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
     }
