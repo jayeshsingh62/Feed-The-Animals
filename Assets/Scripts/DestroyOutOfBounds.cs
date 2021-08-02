@@ -25,7 +25,7 @@ public class DestroyOutOfBounds : MonoBehaviour
         } 
         else if (transform.position.z < lowerBound)
         {
-            Debug.Log("Game Over!");
+            gameManager.AddLives(-1);
             Destroy(gameObject);
         }
 
@@ -33,11 +33,13 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             Debug.Log("Game Over!");
             Destroy(gameObject);
+            gameManager.AddLives(-1);
         }
         else if (transform.position.x < -horizontalBound)
         {
             Debug.Log("Game Over!");
             Destroy(gameObject);
+            gameManager.AddLives(-1);
         }
     }
 }
