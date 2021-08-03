@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DetectCollisions : MonoBehaviour
 {
-    public GameManager gameManager;
+    private GameManager gameManager;
     // Start is called before the first frame update
     void Start()
     {
