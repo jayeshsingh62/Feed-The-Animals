@@ -9,11 +9,16 @@ public class AnimalHunger : MonoBehaviour
     public int amountToBeFed;
 
     private int currentFedAmount = 0;
+    private GameManager gameManager;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        hungerSlider.maxValue = amountToBeFed;
+        hungerSlider.value = 0;
+        hungerSlider.fillRect.gameObject.SetActive(false);
+
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();    
     }
 
     // Update is called once per frame
